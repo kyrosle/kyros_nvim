@@ -1,0 +1,845 @@
+[00:36:16.171][info] [#0:/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/main.lua:49]: Lua Lsp startup, root: 	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server
+[00:36:16.171][debug][#0:/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/main.lua:50]: ROOT:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server
+[00:36:16.171][debug][#0:/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/main.lua:51]: LOGPATH:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/log
+[00:36:16.171][debug][#0:/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/main.lua:52]: METAPATH:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta
+[00:36:16.171][debug][#0:/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/main.lua:53]: VERSION:	2.5.6
+[00:36:16.210][info] [#0:script/service/telemetry.lua:21]: Telemetry Token:	7307879396E125AE
+[00:36:16.214][info] [#0:script/pub/pub.lua:48]: Create brave:	1
+[00:36:16.214][info] [#0:script/pub/pub.lua:48]: Create brave:	2
+[00:36:16.214][info] [#0:script/pub/pub.lua:48]: Create brave:	3
+[00:36:16.214][info] [#0:script/pub/pub.lua:48]: Create brave:	4
+[00:36:16.214][debug][#0:script/service/service.lua:138]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 1.332 MB
+        # 00 : 1.332 MB
+        # 01 : 0.000 MB
+        # 02 : 0.000 MB
+        # 03 : 0.000 MB
+        # 04 : 0.000 MB
+    --------------- Coroutine ---------------
+        Total:     0
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      0
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    --------------- Proto ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[00:36:16.243][debug][#0:script/client.lua:344]: Client init	{
+    capabilities = {
+        callHierarchy = {
+            dynamicRegistration = false,
+        },
+        textDocument = {
+            codeAction = {
+                codeActionLiteralSupport = {
+                    codeActionKind = {
+                        valueSet = {
+                            [01] = "",
+                            [02] = "Empty",
+                            [03] = "QuickFix",
+                            [04] = "Refactor",
+                            [05] = "RefactorExtract",
+                            [06] = "RefactorInline",
+                            [07] = "RefactorRewrite",
+                            [08] = "Source",
+                            [09] = "SourceOrganizeImports",
+                            [10] = "quickfix",
+                            [11] = "refactor",
+                            [12] = "refactor.extract",
+                            [13] = "refactor.inline",
+                            [14] = "refactor.rewrite",
+                            [15] = "source",
+                            [16] = "source.organizeImports",
+                        },
+                    },
+                },
+                dataSupport = true,
+                dynamicRegistration = false,
+                resolveSupport = {
+                    properties = {
+                        [1] = "edit",
+                    },
+                },
+            },
+            completion = {
+                completionItem = {
+                    commitCharactersSupport = true,
+                    deprecatedSupport = true,
+                    documentationFormat = {
+                        [1] = "markdown",
+                        [2] = "plaintext",
+                    },
+                    insertReplaceSupport = true,
+                    labelDetailsSupport = true,
+                    preselectSupport = true,
+                    resolveSupport = {
+                        properties = {
+                            [1] = "documentation",
+                            [2] = "detail",
+                            [3] = "additionalTextEdits",
+                        },
+                    },
+                    snippetSupport = true,
+                    tagSupport = {
+                        valueSet = {
+                            [1] = 1,
+                        },
+                    },
+                },
+                completionItemKind = {
+                    valueSet = {
+                        [01] = 1,
+                        [02] = 2,
+                        [03] = 3,
+                        [04] = 4,
+                        [05] = 5,
+                        [06] = 6,
+                        [07] = 7,
+                        [08] = 8,
+                        [09] = 9,
+                        [10] = 10,
+                        [11] = 11,
+                        [12] = 12,
+                        [13] = 13,
+                        [14] = 14,
+                        [15] = 15,
+                        [16] = 16,
+                        [17] = 17,
+                        [18] = 18,
+                        [19] = 19,
+                        [20] = 20,
+                        [21] = 21,
+                        [22] = 22,
+                        [23] = 23,
+                        [24] = 24,
+                        [25] = 25,
+                    },
+                },
+                contextSupport = false,
+                dynamicRegistration = false,
+            },
+            declaration = {
+                linkSupport = true,
+            },
+            definition = {
+                linkSupport = true,
+            },
+            documentHighlight = {
+                dynamicRegistration = false,
+            },
+            documentSymbol = {
+                dynamicRegistration = false,
+                hierarchicalDocumentSymbolSupport = true,
+                symbolKind = {
+                    valueSet = {
+                        [01] = 1,
+                        [02] = 2,
+                        [03] = 3,
+                        [04] = 4,
+                        [05] = 5,
+                        [06] = 6,
+                        [07] = 7,
+                        [08] = 8,
+                        [09] = 9,
+                        [10] = 10,
+                        [11] = 11,
+                        [12] = 12,
+                        [13] = 13,
+                        [14] = 14,
+                        [15] = 15,
+                        [16] = 16,
+                        [17] = 17,
+                        [18] = 18,
+                        [19] = 19,
+                        [20] = 20,
+                        [21] = 21,
+                        [22] = 22,
+                        [23] = 23,
+                        [24] = 24,
+                        [25] = 25,
+                        [26] = 26,
+                    },
+                },
+            },
+            hover = {
+                contentFormat = {
+                    [1] = "markdown",
+                    [2] = "plaintext",
+                },
+                dynamicRegistration = false,
+            },
+            implementation = {
+                linkSupport = true,
+            },
+            publishDiagnostics = {
+                relatedInformation = true,
+                tagSupport = {
+                    valueSet = {
+                        [1] = 1,
+                        [2] = 2,
+                    },
+                },
+            },
+            references = {
+                dynamicRegistration = false,
+            },
+            rename = {
+                dynamicRegistration = false,
+                prepareSupport = true,
+            },
+            signatureHelp = {
+                dynamicRegistration = false,
+                signatureInformation = {
+                    activeParameterSupport = true,
+                    documentationFormat = {
+                        [1] = "markdown",
+                        [2] = "plaintext",
+                    },
+                    parameterInformation = {
+                        labelOffsetSupport = true,
+                    },
+                },
+            },
+            synchronization = {
+                didSave = true,
+                dynamicRegistration = false,
+                willSave = false,
+                willSaveWaitUntil = false,
+            },
+            typeDefinition = {
+                linkSupport = true,
+            },
+        },
+        window = {
+            showDocument = {
+                support = false,
+            },
+            showMessage = {
+                messageActionItem = {
+                    additionalPropertiesSupport = false,
+                },
+            },
+            workDoneProgress = true,
+        },
+        workspace = {
+            applyEdit = true,
+            configuration = true,
+            symbol = {
+                dynamicRegistration = false,
+                hierarchicalWorkspaceSymbolSupport = true,
+                symbolKind = {
+                    valueSet = {
+                        [01] = 1,
+                        [02] = 2,
+                        [03] = 3,
+                        [04] = 4,
+                        [05] = 5,
+                        [06] = 6,
+                        [07] = 7,
+                        [08] = 8,
+                        [09] = 9,
+                        [10] = 10,
+                        [11] = 11,
+                        [12] = 12,
+                        [13] = 13,
+                        [14] = 14,
+                        [15] = 15,
+                        [16] = 16,
+                        [17] = 17,
+                        [18] = 18,
+                        [19] = 19,
+                        [20] = 20,
+                        [21] = 21,
+                        [22] = 22,
+                        [23] = 23,
+                        [24] = 24,
+                        [25] = 25,
+                        [26] = 26,
+                    },
+                },
+            },
+            workspaceEdit = {
+                resourceOperations = {
+                    [1] = "rename",
+                    [2] = "create",
+                    [3] = "delete",
+                },
+            },
+            workspaceFolders = true,
+        },
+    },
+    clientInfo = {
+        name = "Neovim",
+        version = "0.6.1",
+    },
+    initializationOptions = {
+    },
+    processId = 2012,
+    rootPath = "/home/kyros/.config/nvim",
+    rootUri = "file:///home/kyros/.config/nvim",
+    trace = "off",
+    workspaceFolders = {
+        [1] = {
+            name = "/home/kyros/.config/nvim",
+            uri = "file:///home/kyros/.config/nvim",
+        },
+    },
+}
+[00:36:16.243][info] [#0:script/language.lua:135]: VSC language: nil
+[00:36:16.243][info] [#0:script/language.lua:136]: LS  language: en-us
+[00:36:16.243][info] [#0:script/workspace/workspace.lua:34]: Workspace inited: 	file:///home/kyros/.config/nvim
+[00:36:16.243][info] [#0:script/workspace/workspace.lua:43]: Log path: 	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/log/file_home_kyros_.config_nvim.log
+[00:36:16.245][debug][#0:script/provider/provider.lua:24]: load config from client
+[00:36:16.246][debug][#0:script/provider/provider.lua:42]: loaded config dump:	{
+    Lua = {
+        IntelliSense = {
+            traceBeSetted = false,
+            traceFieldInject = false,
+            traceLocalSet = false,
+            traceReturn = false,
+        },
+        color = {
+            mode = "Semantic",
+        },
+        completion = {
+            autoRequire = true,
+            callSnippet = "Disable",
+            displayContext = 0,
+            enable = true,
+            keywordSnippet = "Replace",
+            postfix = "@",
+            requireSeparator = ".",
+            showParams = true,
+            showWord = "Fallback",
+            workspaceWord = true,
+        },
+        diagnostics = {
+            disable = {
+            },
+            enable = true,
+            globals = {
+                vim = true,
+            },
+            ignoredFiles = "Opened",
+            libraryFiles = "Opened",
+            neededFileStatus = {
+                ["ambiguity-1"] = "Any",
+                ["await-in-sync"] = "None",
+                ["circle-doc-class"] = "Any",
+                ["close-non-object"] = "Any",
+                ["code-after-break"] = "Opened",
+                ["count-down-loop"] = "Any",
+                ["different-requires"] = "Any",
+                ["discard-returns"] = "Opened",
+                ["doc-field-no-class"] = "Any",
+                ["duplicate-doc-class"] = "Any",
+                ["duplicate-doc-field"] = "Any",
+                ["duplicate-doc-param"] = "Any",
+                ["duplicate-index"] = "Any",
+                ["duplicate-set-field"] = "Any",
+                ["empty-block"] = "Opened",
+                ["global-in-nil-env"] = "Any",
+                ["lowercase-global"] = "Any",
+                ["newfield-call"] = "Any",
+                ["newline-call"] = "Any",
+                ["no-implicit-any"] = "None",
+                ["not-yieldable"] = "None",
+                ["redefined-local"] = "Opened",
+                ["redundant-parameter"] = "Opened",
+                ["redundant-return"] = "Opened",
+                ["redundant-value"] = "Opened",
+                ["trailing-space"] = "Opened",
+                ["type-check"] = "None",
+                ["unbalanced-assignments"] = "Any",
+                ["undefined-doc-class"] = "Any",
+                ["undefined-doc-name"] = "Any",
+                ["undefined-doc-param"] = "Any",
+                ["undefined-env-child"] = "Any",
+                ["undefined-field"] = "Opened",
+                ["undefined-global"] = "Any",
+                ["unknown-diag-code"] = "Any",
+                ["unused-function"] = "Opened",
+                ["unused-label"] = "Opened",
+                ["unused-local"] = "Opened",
+                ["unused-vararg"] = "Opened",
+                deprecated = "Opened",
+            },
+            severity = {
+                ["ambiguity-1"] = "Warning",
+                ["await-in-sync"] = "Warning",
+                ["circle-doc-class"] = "Warning",
+                ["close-non-object"] = "Warning",
+                ["code-after-break"] = "Hint",
+                ["count-down-loop"] = "Warning",
+                ["different-requires"] = "Warning",
+                ["discard-returns"] = "Warning",
+                ["doc-field-no-class"] = "Warning",
+                ["duplicate-doc-class"] = "Warning",
+                ["duplicate-doc-field"] = "Warning",
+                ["duplicate-doc-param"] = "Warning",
+                ["duplicate-index"] = "Warning",
+                ["duplicate-set-field"] = "Warning",
+                ["empty-block"] = "Hint",
+                ["global-in-nil-env"] = "Warning",
+                ["lowercase-global"] = "Information",
+                ["newfield-call"] = "Warning",
+                ["newline-call"] = "Information",
+                ["no-implicit-any"] = "Information",
+                ["not-yieldable"] = "Warning",
+                ["redefined-local"] = "Hint",
+                ["redundant-parameter"] = "Warning",
+                ["redundant-return"] = "Warning",
+                ["redundant-value"] = "Warning",
+                ["trailing-space"] = "Hint",
+                ["type-check"] = "Warning",
+                ["unbalanced-assignments"] = "Warning",
+                ["undefined-doc-class"] = "Warning",
+                ["undefined-doc-name"] = "Warning",
+                ["undefined-doc-param"] = "Warning",
+                ["undefined-env-child"] = "Information",
+                ["undefined-field"] = "Warning",
+                ["undefined-global"] = "Warning",
+                ["unknown-diag-code"] = "Waiting",
+                ["unused-function"] = "Hint",
+                ["unused-label"] = "Hint",
+                ["unused-local"] = "Hint",
+                ["unused-vararg"] = "Hint",
+                deprecated = "Warning",
+            },
+            workspaceDelay = 0,
+            workspaceRate = 100,
+        },
+        hint = {
+            await = true,
+            enable = false,
+            paramName = "All",
+            paramType = true,
+            setType = false,
+        },
+        hover = {
+            enable = true,
+            enumsLimit = 5,
+            previewFields = 20,
+            viewNumber = true,
+            viewString = true,
+            viewStringMax = 1000,
+        },
+        runtime = {
+            builtin = {
+            },
+            fileEncoding = "utf8",
+            meta = "${version} ${language} ${encoding}",
+            nonstandardSymbol = {
+            },
+            path = {
+                [1] = "?.lua",
+                [2] = "?/init.lua",
+            },
+            pathStrict = false,
+            plugin = "",
+            special = {
+            },
+            unicodeName = false,
+            version = "Lua 5.4",
+        },
+        signatureHelp = {
+            enable = true,
+        },
+        telemetry = {
+            enable = false,
+        },
+        window = {
+            progressBar = true,
+            statusBar = true,
+        },
+        workspace = {
+            checkThirdParty = true,
+            ignoreDir = {
+            },
+            ignoreSubmodules = true,
+            library = {
+                ["/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua"] = true,
+                ["/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp"] = true,
+            },
+            maxPreload = 100000,
+            preloadFileSize = 10000,
+            useGitIgnore = true,
+            userThirdParty = {
+            },
+        },
+    },
+    editor = {
+        acceptSuggestionOnEnter = "on",
+        semanticHighlighting = {
+            enabled = {
+            },
+        },
+    },
+    files = {
+        associations = {
+        },
+        exclude = {
+        },
+    },
+}
+[00:36:16.255][info] [#0:script/plugin.lua:88]: plugin path:	nil
+[00:36:16.256][debug][#0:script/provider/provider.lua:24]: load config from client
+[00:36:16.257][debug][#0:script/provider/provider.lua:42]: loaded config dump:	{
+    Lua = {
+        IntelliSense = {
+            traceBeSetted = false,
+            traceFieldInject = false,
+            traceLocalSet = false,
+            traceReturn = false,
+        },
+        color = {
+            mode = "Semantic",
+        },
+        completion = {
+            autoRequire = true,
+            callSnippet = "Disable",
+            displayContext = 0,
+            enable = true,
+            keywordSnippet = "Replace",
+            postfix = "@",
+            requireSeparator = ".",
+            showParams = true,
+            showWord = "Fallback",
+            workspaceWord = true,
+        },
+        diagnostics = {
+            disable = {
+            },
+            enable = true,
+            globals = {
+                vim = true,
+            },
+            ignoredFiles = "Opened",
+            libraryFiles = "Opened",
+            neededFileStatus = {
+                ["ambiguity-1"] = "Any",
+                ["await-in-sync"] = "None",
+                ["circle-doc-class"] = "Any",
+                ["close-non-object"] = "Any",
+                ["code-after-break"] = "Opened",
+                ["count-down-loop"] = "Any",
+                ["different-requires"] = "Any",
+                ["discard-returns"] = "Opened",
+                ["doc-field-no-class"] = "Any",
+                ["duplicate-doc-class"] = "Any",
+                ["duplicate-doc-field"] = "Any",
+                ["duplicate-doc-param"] = "Any",
+                ["duplicate-index"] = "Any",
+                ["duplicate-set-field"] = "Any",
+                ["empty-block"] = "Opened",
+                ["global-in-nil-env"] = "Any",
+                ["lowercase-global"] = "Any",
+                ["newfield-call"] = "Any",
+                ["newline-call"] = "Any",
+                ["no-implicit-any"] = "None",
+                ["not-yieldable"] = "None",
+                ["redefined-local"] = "Opened",
+                ["redundant-parameter"] = "Opened",
+                ["redundant-return"] = "Opened",
+                ["redundant-value"] = "Opened",
+                ["trailing-space"] = "Opened",
+                ["type-check"] = "None",
+                ["unbalanced-assignments"] = "Any",
+                ["undefined-doc-class"] = "Any",
+                ["undefined-doc-name"] = "Any",
+                ["undefined-doc-param"] = "Any",
+                ["undefined-env-child"] = "Any",
+                ["undefined-field"] = "Opened",
+                ["undefined-global"] = "Any",
+                ["unknown-diag-code"] = "Any",
+                ["unused-function"] = "Opened",
+                ["unused-label"] = "Opened",
+                ["unused-local"] = "Opened",
+                ["unused-vararg"] = "Opened",
+                deprecated = "Opened",
+            },
+            severity = {
+                ["ambiguity-1"] = "Warning",
+                ["await-in-sync"] = "Warning",
+                ["circle-doc-class"] = "Warning",
+                ["close-non-object"] = "Warning",
+                ["code-after-break"] = "Hint",
+                ["count-down-loop"] = "Warning",
+                ["different-requires"] = "Warning",
+                ["discard-returns"] = "Warning",
+                ["doc-field-no-class"] = "Warning",
+                ["duplicate-doc-class"] = "Warning",
+                ["duplicate-doc-field"] = "Warning",
+                ["duplicate-doc-param"] = "Warning",
+                ["duplicate-index"] = "Warning",
+                ["duplicate-set-field"] = "Warning",
+                ["empty-block"] = "Hint",
+                ["global-in-nil-env"] = "Warning",
+                ["lowercase-global"] = "Information",
+                ["newfield-call"] = "Warning",
+                ["newline-call"] = "Information",
+                ["no-implicit-any"] = "Information",
+                ["not-yieldable"] = "Warning",
+                ["redefined-local"] = "Hint",
+                ["redundant-parameter"] = "Warning",
+                ["redundant-return"] = "Warning",
+                ["redundant-value"] = "Warning",
+                ["trailing-space"] = "Hint",
+                ["type-check"] = "Warning",
+                ["unbalanced-assignments"] = "Warning",
+                ["undefined-doc-class"] = "Warning",
+                ["undefined-doc-name"] = "Warning",
+                ["undefined-doc-param"] = "Warning",
+                ["undefined-env-child"] = "Information",
+                ["undefined-field"] = "Warning",
+                ["undefined-global"] = "Warning",
+                ["unknown-diag-code"] = "Waiting",
+                ["unused-function"] = "Hint",
+                ["unused-label"] = "Hint",
+                ["unused-local"] = "Hint",
+                ["unused-vararg"] = "Hint",
+                deprecated = "Warning",
+            },
+            workspaceDelay = 0,
+            workspaceRate = 100,
+        },
+        hint = {
+            await = true,
+            enable = false,
+            paramName = "All",
+            paramType = true,
+            setType = false,
+        },
+        hover = {
+            enable = true,
+            enumsLimit = 5,
+            previewFields = 20,
+            viewNumber = true,
+            viewString = true,
+            viewStringMax = 1000,
+        },
+        runtime = {
+            builtin = {
+            },
+            fileEncoding = "utf8",
+            meta = "${version} ${language} ${encoding}",
+            nonstandardSymbol = {
+            },
+            path = {
+                [1] = "?.lua",
+                [2] = "?/init.lua",
+            },
+            pathStrict = false,
+            plugin = "",
+            special = {
+            },
+            unicodeName = false,
+            version = "Lua 5.4",
+        },
+        signatureHelp = {
+            enable = true,
+        },
+        telemetry = {
+            enable = false,
+        },
+        window = {
+            progressBar = true,
+            statusBar = true,
+        },
+        workspace = {
+            checkThirdParty = true,
+            ignoreDir = {
+            },
+            ignoreSubmodules = true,
+            library = {
+                ["/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua"] = true,
+                ["/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp"] = true,
+            },
+            maxPreload = 100000,
+            preloadFileSize = 10000,
+            useGitIgnore = true,
+            userThirdParty = {
+            },
+        },
+    },
+    editor = {
+        acceptSuggestionOnEnter = "on",
+        semanticHighlighting = {
+            enabled = {
+            },
+        },
+    },
+    files = {
+        associations = {
+        },
+        exclude = {
+        },
+    },
+}
+[00:36:17.242][info] [#0:script/workspace/workspace.lua:335]: Preload start.
+[00:36:17.243][info] [#0:script/workspace/workspace.lua:100]: Ignore by .gitignore:	tmp
+[00:36:17.243][info] [#0:script/workspace/workspace.lua:100]: Ignore by .gitignore:	autoload
+[00:36:17.243][info] [#0:script/workspace/workspace.lua:100]: Ignore by .gitignore:	plugged
+[00:36:17.243][info] [#0:script/workspace/workspace.lua:100]: Ignore by .gitignore:	plugin
+[00:36:17.243][info] [#0:script/workspace/workspace.lua:100]: Ignore by .gitignore:	lua/custom.lua
+[00:36:17.243][info] [#0:script/workspace/workspace.lua:129]: Ignore by library:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.243][info] [#0:script/workspace/workspace.lua:129]: Ignore by library:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.243][debug][#0:script/workspace/workspace.lua:168]: getLibraryMatchers	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8
+[00:36:17.243][debug][#0:script/workspace/workspace.lua:168]: getLibraryMatchers	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.243][debug][#0:script/workspace/workspace.lua:168]: getLibraryMatchers	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.243][info] [#0:script/workspace/workspace.lua:340]: Scan files at:	/home/kyros/.config/nvim
+[00:36:17.248][info] [#0:script/workspace/workspace.lua:345]: Scan library at:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8
+[00:36:17.249][info] [#0:script/workspace/workspace.lua:345]: Scan library at:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.253][info] [#0:script/workspace/workspace.lua:345]: Scan library at:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.255][info] [#0:script/workspace/workspace.lua:369]: Found 78 files.
+[00:36:17.255][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/sync.lua , size = 15.155 KB
+[00:36:17.255][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.262][info] [#0:script/workspace/workspace.lua:372]: Loaded 1/78 files
+[00:36:17.263][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/_snippet.lua , size = 9.171 KB
+[00:36:17.263][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.271][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/buf.lua , size = 22.072 KB
+[00:36:17.271][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.283][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/codelens.lua , size = 7.201 KB
+[00:36:17.283][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.289][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/diagnostic.lua , size = 25.556 KB
+[00:36:17.289][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.305][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/handlers.lua , size = 17.542 KB
+[00:36:17.305][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.315][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/health.lua , size = 0.836 KB
+[00:36:17.315][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.317][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/log.lua , size = 4.021 KB
+[00:36:17.317][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.323][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/protocol.lua , size = 32.275 KB
+[00:36:17.323][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.334][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/rpc.lua , size = 20.306 KB
+[00:36:17.334][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.347][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/tagfunc.lua , size = 2.347 KB
+[00:36:17.347][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.350][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/util.lua , size = 66.326 KB
+[00:36:17.350][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp
+[00:36:17.395][info] [#0:script/workspace/workspace.lua:372]: Loaded 12/78 files
+[00:36:17.397][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/health.lua , size = 0.379 KB
+[00:36:17.397][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.399][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/man.lua , size = 4.848 KB
+[00:36:17.399][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.403][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/_meta.lua , size = 19.112 KB
+[00:36:17.403][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.421][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/F.lua , size = 0.757 KB
+[00:36:17.421][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.423][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/compat.lua , size = 0.508 KB
+[00:36:17.423][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.425][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/diagnostic.lua , size = 52.197 KB
+[00:36:17.425][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.462][info] [#0:script/workspace/workspace.lua:372]: Loaded 18/78 files
+[00:36:17.464][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/inspect.lua , size = 9.502 KB
+[00:36:17.464][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.470][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/highlight.lua , size = 3.317 KB
+[00:36:17.470][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.473][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/buf.lua , size = 22.072 KB
+[00:36:17.473][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.474][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/_snippet.lua , size = 9.171 KB
+[00:36:17.474][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.475][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/diagnostic.lua , size = 25.556 KB
+[00:36:17.475][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.476][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/codelens.lua , size = 7.201 KB
+[00:36:17.476][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/handlers.lua , size = 17.542 KB
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/health.lua , size = 0.836 KB
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/log.lua , size = 4.021 KB
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/rpc.lua , size = 20.306 KB
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/protocol.lua , size = 32.275 KB
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/tagfunc.lua , size = 2.347 KB
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/sync.lua , size = 15.155 KB
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp/util.lua , size = 66.326 KB
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/shared.lua , size = 17.089 KB
+[00:36:17.477][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.496][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/lsp.lua , size = 63.850 KB
+[00:36:17.496][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.531][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/treesitter/health.lua , size = 1.136 KB
+[00:36:17.531][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.533][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua , size = 8.089 KB
+[00:36:17.533][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.539][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/treesitter/language.lua , size = 1.217 KB
+[00:36:17.539][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.541][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/treesitter/languagetree.lua , size = 15.418 KB
+[00:36:17.541][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.559][info] [#0:script/workspace/workspace.lua:372]: Loaded 38/78 files
+[00:36:17.560][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/treesitter/query.lua , size = 16.371 KB
+[00:36:17.560][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.569][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/treesitter.lua , size = 2.848 KB
+[00:36:17.569][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.573][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/ui.lua , size = 2.616 KB
+[00:36:17.573][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.574][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua/vim/uri.lua , size = 3.345 KB
+[00:36:17.575][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/tmp/.mount_nvimaM7X5i/usr/share/nvim/runtime/lua
+[00:36:17.577][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua%205.4%20en-us%20utf8/os.lua , size = 4.299 KB
+[00:36:17.577][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8
+[00:36:17.591][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua%205.4%20en-us%20utf8/basic.lua , size = 13.954 KB
+[00:36:17.591][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8
+[00:36:17.597][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua%205.4%20en-us%20utf8/io.lua , size = 6.375 KB
+[00:36:17.597][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8
+[00:36:17.601][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua%205.4%20en-us%20utf8/utf8.lua , size = 2.352 KB
+[00:36:17.601][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8
+[00:36:17.603][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua%205.4%20en-us%20utf8/table.lua , size = 2.767 KB
+[00:36:17.603][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8
+[00:36:17.605][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua%205.4%20en-us%20utf8/string.lua , size = 6.207 KB
+[00:36:17.605][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8
+[00:36:17.609][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua%205.4%20en-us%20utf8/builtin.lua , size = 0.216 KB
+[00:36:17.609][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8
+[00:36:17.612][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua%205.4%20en-us%20utf8/math.lua , size = 8.633 KB
+[00:36:17.612][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8
+[00:36:17.628][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua%205.4%20en-us%20utf8/package.lua , size = 2.937 KB
+[00:36:17.628][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8
+[00:36:17.630][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua%205.4%20en-us%20utf8/coroutine.lua , size = 2.573 KB
+[00:36:17.630][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8
+[00:36:17.632][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua%205.4%20en-us%20utf8/debug.lua , size = 7.516 KB
+[00:36:17.632][info] [#0:script/workspace/workspace.lua:249]: ++++As library of:	/home/kyros/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/meta/Lua 5.4 en-us utf8
+[00:36:17.636][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/plug.lua , size = 12.295 KB
+[00:36:17.641][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/utils.lua , size = 4.295 KB
+[00:36:17.645][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/keymap.lua , size = 2.223 KB
+[00:36:17.647][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/options.lua , size = 3.551 KB
+[00:36:17.663][info] [#0:script/workspace/workspace.lua:372]: Loaded 57/78 files
+[00:36:17.664][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/colors.lua , size = 1.691 KB
+[00:36:17.665][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/commands.lua , size = 0.750 KB
+[00:36:17.666][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/telescope_config.lua , size = 2.135 KB
+[00:36:17.668][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/nvimtree.lua , size = 3.760 KB
+[00:36:17.670][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/treesitter.lua , size = 0.175 KB
+[00:36:17.670][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/lsp.lua , size = 4.149 KB
+[00:36:17.673][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/bufferline_config.lua , size = 0.637 KB
+[00:36:17.674][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/vim-go.lua , size = 0.954 KB
+[00:36:17.675][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/fterm.lua , size = 0.306 KB
+[00:36:17.675][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/gitsign.lua , size = 1.996 KB
+[00:36:17.676][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/dap_config/dap_cpp.lua , size = 0.572 KB
+[00:36:17.677][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/dap_config/init.lua , size = 0.036 KB
+[00:36:17.677][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/mkdp.lua , size = 0.085 KB
+[00:36:17.678][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/symbols.lua , size = 1.790 KB
+[00:36:17.679][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/indent.lua , size = 0.571 KB
+[00:36:17.679][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/completion.lua , size = 2.239 KB
+[00:36:17.681][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/autopairs.lua , size = 2.019 KB
+[00:36:17.682][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/statusline.lua , size = 10.010 KB
+[00:36:17.687][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/dashboard.lua , size = 0.923 KB
+[00:36:17.688][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/lua/config/rust.lua , size = 1.650 KB
+[00:36:17.689][info] [#0:script/workspace/workspace.lua:247]: Preload file at: file:///home/kyros/.config/nvim/init.lua , size = 0.922 KB
+[00:36:18.243][info] [#0:script/workspace/workspace.lua:372]: Loaded 78/78 files
+[00:36:18.243][info] [#0:script/workspace/workspace.lua:381]: Preload finish.
+[00:36:19.243][debug][#0:script/proto/proto.lua:157]: Method [textDocument/didOpen] takes [0.470]sec.
+[00:36:19.326][debug][#0:script/provider/diagnostic.lua:370]: 全文诊断耗时：	0.085197
+[00:36:22.540][debug][#0:script/provider/diagnostic.lua:370]: 全文诊断耗时：	0.073363
+[00:36:23.305][debug][#0:script/provider/diagnostic.lua:370]: 全文诊断耗时：	0.074644
+[00:36:25.295][debug][#0:script/provider/diagnostic.lua:370]: 全文诊断耗时：	0.052487
+[00:36:25.676][info] [#0:script/provider/provider.lua:119]: Server shutdown.
+[00:36:25.677][info] [#0:script/provider/provider.lua:112]: Server exited.

@@ -1,0 +1,22 @@
+ERROR 2022-01-09T22:32:08.275 10695 provider_invoke:189: error in provider treesitter/highlighter:line: Error executing lua: ...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:259: end_col value outside range
+stack traceback:
+	[C]: in function 'nvim_buf_set_extmark'
+	...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:259: in function 'fn'
+	...r/share/nvim/runtime/lua/vim/treesitter/languagetree.lua:194: in function 'for_each_tree'
+	...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:231: in function 'on_line_impl'
+	...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:278: in function <...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:274>
+ERROR 2022-01-09T22:32:08.330 10695 provider_invoke:189: error in provider treesitter/highlighter:line: Error executing lua: ...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:259: end_col value outside range
+stack traceback:
+	[C]: in function 'nvim_buf_set_extmark'
+	...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:259: in function 'fn'
+	...r/share/nvim/runtime/lua/vim/treesitter/languagetree.lua:194: in function 'for_each_tree'
+	...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:231: in function 'on_line_impl'
+	...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:278: in function <...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:274>
+ERROR 2022-01-09T22:32:08.354 10695 provider_invoke:189: error in provider treesitter/highlighter:line: Error executing lua: ...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:259: end_col value outside range
+stack traceback:
+	[C]: in function 'nvim_buf_set_extmark'
+	...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:259: in function 'fn'
+	...r/share/nvim/runtime/lua/vim/treesitter/languagetree.lua:194: in function 'for_each_tree'
+	...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:231: in function 'on_line_impl'
+	...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:278: in function <...sr/share/nvim/runtime/lua/vim/treesitter/highlighter.lua:274>
+WARN  2022-01-10T14:59:05.273 8995  server_start:154: Failed to start server: address already in use: /tmp/nvimF5OxAX/0

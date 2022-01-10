@@ -1,0 +1,1 @@
+{"primary_source":{"file":"https:\/\/github.com\/clangd\/clangd\/releases\/download\/13.0.0\/clangd-linux-13.0.0.zip","type":"github_release_file","repo":"clangd\/clangd","release":"13.0.0"},"name":"clangd","secondary_sources":[],"schema_version":"1.0a","metrics":{"completion_time":1641734181527,"start_time":1641734165286}}
