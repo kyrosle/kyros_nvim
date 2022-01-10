@@ -7,6 +7,8 @@ let g:coc_disable_startup_warning = 1
 let mapleader=" "
 
 call plug#begin('~/.vim/plugged')
+" auto pairs
+Plug 'jiangmiao/auto-pairs' 
 
 " 预览文件树
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
@@ -538,8 +540,8 @@ EOF
 
 " self settings
 inoremap jk <Esc> "将jk映射到Esc
-imap {<CR> {}<ESC>i<CR><ESC>V<O
-imap {<expr> {<expr>}
+"imap {<CR> {}<ESC>i<CR><ESC>V<O
+"imap {<expr> {<expr>}
 
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
