@@ -6,7 +6,7 @@ let g:coc_disable_startup_warning = 1
 
 let mapleader=" "
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/.vim/plugged')
 " auto pairs
 Plug 'jiangmiao/auto-pairs' 
 
