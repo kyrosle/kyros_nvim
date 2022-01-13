@@ -7,6 +7,33 @@ let g:coc_disable_startup_warning = 1
 let mapleader=" "
 
 call plug#begin('~/.config/nvim/.vim/plugged')
+" 菜单栏美化
+if has('nvim')
+  function! UpdateRemotePlugins(...)
+    " Needed to refresh runtime files
+    let &rtp=&rtp
+    UpdateRemotePlugins
+  endfunction
+
+  Plug 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
+else
+  Plug 'gelguy/wilder.nvim'
+
+  " To use Python remote plugin features in Vim, can be skipped
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+" 突出光标词
+Plug 'itchyny/vim-cursorword'
+
+" quick run core
+Plug 'thinca/vim-quickrun'
+
+" 快速对齐
+Plug 'junegunn/vim-easy-align'
+
+"
 " auto pairs
 Plug 'jiangmiao/auto-pairs' 
 
@@ -22,6 +49,7 @@ Plug 'nvim-telescope/telescope.nvim'
 
 " bufferline
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
+Plug 'lambdalisue/nerdfont.vim'
 " Plug 'ryanoasis/vim-devicons' Icons without colours
 Plug 'akinsho/bufferline.nvim'
 
@@ -66,8 +94,18 @@ Plug 'Yggdroot/indentLine'
 Plug 'vim-airline/vim-airline'       
 Plug 'vim-airline/vim-airline-themes' "airline 的主题
 
+" 显示代码结构
+Plug 'liuchengxu/vista.vim'
+
 " 注释工具 
 Plug 'scrooloose/nerdcommenter'
+
+" 分割窗口
+Plug 'vimlab/split-term.vim' 
+"Plug 'akinsho/toggleterm.nvim'
+Plug 'numToStr/FTerm.nvim'
+"Plug 'voldikss/vim-floaterm'
+
 
 " 文件树 
 " Plug 'preservim/nerdtree'
@@ -89,6 +127,58 @@ call plug#end()
 
 " -----------------------------
 "
+
+
+lua << EOF
+require'FTerm'.setup({
+    border = 'double',
+    hl = 'Normal',
+    blend = 0;
+    dimensions  = {
+        height = 0.9,
+        width = 0.9,
+    },
+})
+
+-- Example keybindings
+local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+
+map('n', '<A-i>', '<CMD>lua require("FTerm").toggle()<CR>', opts)
+map('t', '<A-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
+EOF
+
+
+" 显示代码结构
+let g:tagbar_width=30
+nnoremap <silent> <F1> :TagbarToggle<CR> " 将tagbar的开关按键设置为 F1
+
+" 分割窗口
+let g:split_term_default_shell = "zsh"
+
+" 快速对齐
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" demo : https://github.com/junegunn/vim-easy-align
+
+
+" 'border'            : 'single', 'double', 'rounded' or 'solid'
+"                     : can also be a list of 8 characters
+" 'highlights.border' : highlight to use for the border`
+" Key bindings can be changed, see below
+call wilder#setup({'modes': [':', '/', '?']}) 
+call wilder#set_option('renderer', wilder#popupmenu_renderer(wilder#popupmenu_border_theme({
+      \ 'highlights': {
+      \   'border': 'Normal',
+      \ },
+      \ 'border': 'rounded',
+      \ })))
+
+
 
 " dashboard settings
 " Default value is clap
@@ -161,7 +251,7 @@ EOF
 colorscheme one
 set background=dark " for the dark version
 let g:lightline = {
-      \ 'colorscheme': 'molokai',
+      \ 'colorscheme': 'one',
       \ 'component': {
       \   'readonly': '%{&readonly?"":""}',
       \ },
@@ -454,7 +544,7 @@ set shortmess=atl
           "\ }
 "endif
 "共享剪切板
-set clipboard+=unnamed 
+"set clipboard+=unnamed 
 set cmdheight=3
 if version >= 603
     set helplang=cn
@@ -540,8 +630,6 @@ EOF
 
 " self settings
 inoremap jk <Esc> "将jk映射到Esc
-"imap {<CR> {}<ESC>i<CR><ESC>V<O
-"imap {<expr> {<expr>}
 
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
