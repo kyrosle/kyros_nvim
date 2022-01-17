@@ -53,6 +53,9 @@ Plug 'lambdalisue/nerdfont.vim'
 " Plug 'ryanoasis/vim-devicons' Icons without colours
 Plug 'akinsho/bufferline.nvim'
 
+" gruvbox
+Plug 'morhetz/gruvbox'
+
 " lightline 
 Plug 'itchyny/lightline.vim'
 
@@ -248,10 +251,21 @@ EOF
 "colorscheme nord 
 
 " vim-one settings
-colorscheme one
+"colorscheme one
+"set background=dark " for the dark version
+"let g:lightline = {
+      "\ 'colorscheme': 'one',
+      "\ 'component': {
+      "\   'readonly': '%{&readonly?"":""}',
+      "\ },
+      "\ 'separator':    { 'left': '', 'right': '' },
+      "\ 'subseparator': { 'left': '', 'right': '' },
+      "\ }
+" gruvbox settings
+colorscheme gruvbox
 set background=dark " for the dark version
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'gruvbox',
       \ 'component': {
       \   'readonly': '%{&readonly?"":""}',
       \ },
@@ -631,30 +645,41 @@ EOF
 " self settings
 inoremap jk <Esc> "将jk映射到Esc
 
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
+"inoremap <c-> <Left>
+inoremap <c-j> <Down>
+inoremap <c-k> <Up>
+inoremap <c-l> <Right>
 
 noremap <C-s> :w<CR>
-noremap Q :wq<CR>
+noremap Q ZZ
 noremap R :source $MYVIMRC<CR>
 " 注释
 map <leader>. <leader>c<leader> 
 " wsl 与 win 剪贴板
 map <leader>y :!clip.exe < %<CR>
-" 快速编译
-map <leader>8 :Cargo r<CR>
-map <leader>9 :!make<CR>
-map <leader>0 :!make clean<CR>
 " 查看详细
 map <C-insert> gd
 map <C-delete> :bd<CR>
 " 切换buffer
-map <A-h> :bp<CR>
-map <A-l> :bn<CR>
+map <a-h> :bp<CR>
+map <a-l> :bn<CR>
 " 取消搜索
 map <Esc> :nohl<CR>
 " 行头 行尾
 noremap H 0
 noremap L $
+
+autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
+
+" 快速编译
+map <F7> :call RunPython()<CR>
+fun! RunPython()
+    exec "w"
+    if &filetype=='python'
+        exec "!time python3 %"
+    elseif &filetype=='cpp'
+        exec "make"
+    endif
+endfunc
+map <leader>9 :Cargo run<CR>
+map <leader>0 :make clean<CR>
