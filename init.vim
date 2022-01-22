@@ -139,7 +139,9 @@ require'FTerm'.setup({
     blend = 0;
     dimensions  = {
         height = 0.9,
-        width = 0.9,
+        width = 0.8,
+        x = 0.8,
+        y = 0,
     },
 })
 
