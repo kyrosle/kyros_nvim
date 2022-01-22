@@ -94,8 +94,8 @@ Plug 'karb94/neoscroll.nvim'
 Plug 'Yggdroot/indentLine'
 
 " 底下标签
-Plug 'vim-airline/vim-airline'       
-Plug 'vim-airline/vim-airline-themes' "airline 的主题
+"Plug 'vim-airline/vim-airline'       
+"Plug 'vim-airline/vim-airline-themes' "airline 的主题
 
 " 显示代码结构
 Plug 'liuchengxu/vista.vim'
@@ -130,7 +130,7 @@ call plug#end()
 
 " -----------------------------
 "
-
+let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 
 lua << EOF
 require'FTerm'.setup({
@@ -246,26 +246,14 @@ set termguicolors
 lua << EOF
 require("bufferline").setup{}
 EOF
+"hi Normal ctermfg=252 ctermbg=none
 
-"nerd-vim
-"colorscheme nord 
-
-" vim-one settings
-"colorscheme one
-"set background=dark " for the dark version
-"let g:lightline = {
-      "\ 'colorscheme': 'one',
-      "\ 'component': {
-      "\   'readonly': '%{&readonly?"":""}',
-      "\ },
-      "\ 'separator':    { 'left': '', 'right': '' },
-      "\ 'subseparator': { 'left': '', 'right': '' },
-      "\ }
-" gruvbox settings
-colorscheme gruvbox
-set background=dark " for the dark version
+colorscheme gruvbox-material
+hi! Normal ctermfg=NONE ctermbg=NONE guibg=NONE
+hi! NonText  ctermfg=NONE ctermbg=NONE guibg=NONE 
+hi! EndOfBuffer ctermfg=NONE ctermbg=NONE guibg=NONE 
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'one',
       \ 'component': {
       \   'readonly': '%{&readonly?"":""}',
       \ },
@@ -273,71 +261,8 @@ let g:lightline = {
       \ 'subseparator': { 'left': '', 'right': '' },
       \ }
 
-" set background=light " for the light version
-
-" hydrangea settings
-"colorscheme hydrangea
-"let g:lightline = {
-      "\ 'colorscheme': 'hydrangea',
-      "\ 'component': {
-      "\   'readonly': '%{&readonly?"":""}',
-      "\ },
-      "\ 'separator':    { 'left': '', 'right': '' },
-      "\ 'subseparator': { 'left': '', 'right': '' },
-      "\ }
-
-" 设置状态栏
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#buffer_nr_show = 0
-let g:airline#extensions#tabline#formatter = 'deus'
-let g:airline_theme = 'deus'  " 主题
-let g:airline#extensions#keymap#enabled = 1
-let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline#extensions#tabline#buffer_idx_format = {
-       \ '0': '0 ',
-       \ '1': '1 ',
-       \ '2': '2 ',
-       \ '3': '3 ',
-       \ '4': '4 ',
-       \ '5': '5 ',
-       \ '6': '6 ',
-       \ '7': '7 ',
-       \ '8': '8 ',
-       \ '9': '9 '
-       \}
-
-
 let b:coc_pairs_disabled = ['<']
 let g:vimspector_enable_mappings = 'HUMAN'
-
-" 设置切换tab的快捷键 <\> + <i> 切换到第i个 tab
-nmap <leader>1 <Plug>AirlineSelectTab1
-nmap <leader>2 <Plug>AirlineSelectTab2
-nmap <leader>3 <Plug>AirlineSelectTab3
-nmap <leader>4 <Plug>AirlineSelectTab4
-nmap <leader>5 <Plug>AirlineSelectTab5
-nmap <leader>6 <Plug>AirlineSelectTab6
-nmap <leader>7 <Plug>AirlineSelectTab7
-nmap <leader>8 <Plug>AirlineSelectTab8
-nmap <leader>9 <Plug>AirlineSelectTab9
-" 设置切换tab的快捷键 <\> + <-> 切换到前一个 tab
-nmap <leader>- <Plug>AirlineSelectPrevTab
-" 设置切换tab的快捷键 <\> + <+> 切换到后一个 tab
-nmap <leader>+ <Plug>AirlineSelectNextTab
-" 设置切换tab的快捷键 <\> + <q> 退出当前的 tab
-nmap <leader>q :bp<cr>:bd #<cr>
-" 修改了一些个人不喜欢的字符
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_symbols.linenr = "CL" " current line
-let g:airline_symbols.whitespace = '|'
-let g:airline_symbols.maxlinenr = 'Ml' "maxline
-let g:airline_symbols.branch = 'BR'
-let g:airline_symbols.readonly = "RO"
-let g:airline_symbols.dirty = "DT"
-let g:airline_symbols.crypt = "CR" 
 
 " nvim-tree
 lua <<EOF
@@ -560,10 +485,8 @@ set shortmess=atl
 "共享剪切板
 "set clipboard+=unnamed 
 set cmdheight=3
-if version >= 603
-    set helplang=cn
-    set encoding=utf-8
-endif
+set helplang=cn
+set encoding=utf-8
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
@@ -573,13 +496,14 @@ set updatetime=300
 set shortmess+=c
 set signcolumn=yes
 set modifiable
+noremap = nzz
+noremap - Nzz
  
 " autocmd FileType json syntax match Comment +\/\/.\+$+
  
 set foldmethod=indent " 设置默认折叠方式为缩进
 set foldlevelstart=99 " 每次打开文件时关闭折叠
  
-" hi Normal ctermfg=252 ctermbg=none "背景透明
 " hi Normal ctermbg=none
 " au FileType gitcommit,gitrebase let g:gutentags_enabled=0
 if has("autocmd")
@@ -683,3 +607,18 @@ fun! RunPython()
 endfunc
 map <leader>9 :Cargo run<CR>
 map <leader>0 :make clean<CR>
+
+"创建文件头
+autocmd BufNewFile *.py,*.tex exec ":call SetTitle()"
+func! SetTitle() 
+    if &filetype == 'python'
+        call setline(1,"#!/usr/bin/env python3")
+        call append(line("."),"# -*- coding:UTF-8 -*-")
+        call append(line(".")+1,"##########################################################################")
+        call append(line(".")+2, "# File Name: ".expand("%"))
+        call append(line(".")+3, "# Author: stubborn vegeta")
+        call append(line(".")+4, "# Created Time: ".strftime("%c"))
+        call append(line(".")+5, "##########################################################################")
+    endif
+    normal Go 
+endfunc
