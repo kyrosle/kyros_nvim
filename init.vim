@@ -252,7 +252,6 @@ EOF
 
 colorscheme gruvbox-material
 hi! Normal ctermfg=NONE ctermbg=NONE guibg=NONE
-hi! NonText  ctermfg=NONE ctermbg=NONE guibg=NONE 
 hi! EndOfBuffer ctermfg=NONE ctermbg=NONE guibg=NONE 
 let g:lightline = {
       \ 'colorscheme': 'one',
