@@ -251,8 +251,13 @@ EOF
 "hi Normal ctermfg=252 ctermbg=none
 
 colorscheme gruvbox-material
-hi! Normal ctermfg=NONE ctermbg=NONE guibg=NONE
-hi! EndOfBuffer ctermfg=NONE ctermbg=NONE guibg=NONE 
+"hi! Normal  ctermbg = NONE ctermfg = NONE guibg=NONE
+hi! Normal  guibg=NONE
+hi! EndOfBuffer ctermbg = NONE ctermfg = NONE guibg=NONE 
+"hi! EndOfBuffer guibg=NONE 
+"开启光亮光标行
+  "set cursorline
+  "hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=grey guifg=white
 let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'component': {
@@ -437,7 +442,6 @@ filetype plugin on
 set t_ut= " 防止vim背景颜色错误
 set relativenumber "相对行号
 set showmatch " 高亮匹配括号
-set cursorline "高亮所在行
 set wrap "设置换行
 set showcmd "设置按下的键
 set nobackup "不需要备份文件
