@@ -7,6 +7,18 @@ let g:coc_disable_startup_warning = 1
 let mapleader=" "
 
 call plug#begin('~/.config/nvim/.vim/plugged')
+" 语法高亮
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" vim-pink-moon
+Plug 'sts10/vim-pink-moon'
+
+" zephyrium
+Plug 'titanzero/zephyrium'
+
+" yowish
+Plug 'KabbAmine/yowish.vim'
+
 " 菜单栏美化
 if has('nvim')
   function! UpdateRemotePlugins(...)
@@ -33,7 +45,9 @@ Plug 'thinca/vim-quickrun'
 " 快速对齐
 Plug 'junegunn/vim-easy-align'
 
-"
+" easymotion
+Plug 'easymotion/vim-easymotion'
+
 " auto pairs
 Plug 'jiangmiao/auto-pairs' 
 
@@ -55,6 +69,7 @@ Plug 'akinsho/bufferline.nvim'
 
 " gruvbox
 Plug 'morhetz/gruvbox'
+"Plug 'ellisonleao/gruvbox.nvim'
 
 " lightline 
 Plug 'itchyny/lightline.vim'
@@ -250,14 +265,17 @@ require("bufferline").setup{}
 EOF
 "hi Normal ctermfg=252 ctermbg=none
 
-colorscheme gruvbox-material
-"hi! Normal  ctermbg = NONE ctermfg = NONE guibg=NONE
-hi! Normal  guibg=NONE
-hi! EndOfBuffer ctermbg = NONE ctermfg = NONE guibg=NONE 
-"hi! EndOfBuffer guibg=NONE 
-"开启光亮光标行
-  "set cursorline
-  "hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=grey guifg=white
+"colorscheme gruvbox-material
+"set termguicolors
+"set background = dark
+colorscheme gruvbox
+set background=dark
+highlight Normal guibg=NONE ctermbg=None
+"hi! Normal ctermfg=NONE ctermbg=NONE guibg=NONE
+"hi! NonText  ctermfg=NONE ctermbg=NONE guibg=NONE 
+hi! NormalFloat  ctermfg=NONE ctermbg=NONE guibg=NONE 
+hi! Pmenu  ctermfg=NONE ctermbg=NONE guibg=NONE 
+"hi! EndOfBuffer  ctermfg=NONE ctermbg=NONE guibg=NONE 
 let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'component': {
@@ -382,9 +400,11 @@ nmap <silent> gy <plug>(coc-type-definition)
 nmap <silent> gi <plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
  
+
+
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
- 
+
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -442,6 +462,7 @@ filetype plugin on
 set t_ut= " 防止vim背景颜色错误
 set relativenumber "相对行号
 set showmatch " 高亮匹配括号
+set cursorline "高亮所在行
 set wrap "设置换行
 set showcmd "设置按下的键
 set nobackup "不需要备份文件
@@ -581,7 +602,7 @@ inoremap <c-l> <Right>
 
 noremap <C-s> :w<CR>
 noremap Q ZZ
-noremap R :source $MYVIMRC<CR>
+noremap R :bufdo e <CR>
 " 注释
 map <leader>. <leader>c<leader> 
 " wsl 与 win 剪贴板
@@ -627,3 +648,4 @@ func! SetTitle()
     endif
     normal Go 
 endfunc
+
