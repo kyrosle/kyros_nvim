@@ -7,8 +7,18 @@ let g:coc_disable_startup_warning = 1
 let mapleader=" "
 
 call plug#begin('~/.config/nvim/.vim/plugged')
+" 个人文档
+Plug 'vim-utils/vim-man' 
+
 " 语法高亮
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" 代码折叠
+Plug 'anuvyklack/pretty-fold.nvim'
+Plug 'vim-scripts/restore_view.vim'
+
+" 代码缩进线
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " vim-pink-moon
 Plug 'sts10/vim-pink-moon'
@@ -173,7 +183,7 @@ EOF
 
 
 " 显示代码结构
-let g:tagbar_width=30
+let g:tagbar_width=45
 nnoremap <silent> <F1> :TagbarToggle<CR> " 将tagbar的开关按键设置为 F1
 
 " 分割窗口
@@ -530,7 +540,7 @@ noremap - Nzz
  
 " autocmd FileType json syntax match Comment +\/\/.\+$+
  
-set foldmethod=indent " 设置默认折叠方式为缩进
+set foldmethod=syntax " 设置默认折叠方式为缩进
 set foldlevelstart=99 " 每次打开文件时关闭折叠
  
 " hi Normal ctermbg=none
@@ -578,8 +588,8 @@ local autosave = require("autosave")
 autosave.setup(
     {
         enabled = true,
-        execution_message = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"),
-        events = {"InsertLeave", "TextChanged"},
+        execution_message = "🌿( ﾟ∀。)" .. vim.fn.strftime("%H:%M:%S"),
+        events = {"InsertLeave", "TextChanged", "CursorMoved", "BufWinLeave"},
         conditions = {
             exists = true,
             filename_is_not = {},
@@ -589,7 +599,7 @@ autosave.setup(
         write_all_buffers = false,
         on_off_commands = true,
         clean_command_line_interval = 0,
-        debounce_delay = 135
+        debounce_delay = 20
     }
 )
 EOF
@@ -607,7 +617,7 @@ noremap <C-s> :w<CR>
 noremap Q ZZ
 noremap R :bufdo e <CR>
 " 注释
-map <leader>. <leader>c<leader> 
+map <leader>. <leader>c<leader><Esc>
 " wsl 与 win 剪贴板
 map <leader>y :!clip.exe < %<CR>
 " 查看详细
@@ -666,14 +676,15 @@ nmap ss <Plug>(easymotion-overwin-f2)
 let g:EasyMotion_smartcase = 1
 
 " Gif config
-nmap <Leader>l <Plug>(easymotion-lineforward)
-nmap <Leader>j <Plug>(easymotion-j)
-nmap <Leader>k <Plug>(easymotion-k)
-nmap <Leader>h <Plug>(easymotion-linebackward)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
 
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
 let g:easymotion#is_active = 0
+
 function! EasyMotionCoc() abort
   if EasyMotion#is_active()
     let g:easymotion#is_active = 1
@@ -686,3 +697,29 @@ function! EasyMotionCoc() abort
   endif
 endfunction
 autocmd TextChanged,CursorMoved * call EasyMotionCoc()
+
+
+nmap <tab> za
+lua<<EOF
+require('pretty-fold').setup{
+       keep_indentation = false,
+   fill_char = ' ',
+   sections = {
+      left = {
+         '●', function() return string.rep('', vim.v.foldlevel) end, ' ', 'content', '↩ '
+      },
+      right = {
+         '', 'number_of_folded_lines', ': ', 'percentage', ' ',
+      }
+   }
+}
+require('pretty-fold.preview').setup_keybinding()
+EOF
+" 保存folds
+set viewoptions=folds,slash,unix
+
+"vim-man
+"<leader>b新建水平窗口打开man
+"map <leader>b <Plug>(Man)
+"<leader>v新建竖直窗口打开man
+map <leader>v <Plug>(Vman)
