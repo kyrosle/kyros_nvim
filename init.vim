@@ -184,7 +184,7 @@ EOF
 
 " 显示代码结构
 let g:tagbar_width=45
-nnoremap <silent> <F1> :TagbarToggle<CR> " 将tagbar的开关按键设置为 F1
+nnoremap <silent> <F2> :TagbarToggle<CR> " 将tagbar的开关按键设置为 F1
 
 " 分割窗口
 let g:split_term_default_shell = "zsh"
@@ -281,7 +281,7 @@ EOF
 "colorscheme gruvbox-material
 "set termguicolors
 "set background = dark
-colorscheme gruvbox
+colorscheme yowish
 set background=dark
 highlight Normal guibg=NONE ctermbg=None
 "hi! Normal ctermfg=NONE ctermbg=NONE guibg=NONE
@@ -365,7 +365,7 @@ require'nvim-tree'.setup {
   }
 }
 EOF
-nnoremap <F2> :NvimTreeToggle<CR>
+nnoremap <F1> :NvimTreeToggle<CR>
 
 " if hidden is not set, textedit might fail.
 set hidden
@@ -589,7 +589,7 @@ autosave.setup(
     {
         enabled = true,
         execution_message = "🌿( ﾟ∀。)" .. vim.fn.strftime("%H:%M:%S"),
-        events = {"InsertLeave", "TextChanged", "CursorMoved", "BufWinLeave"},
+        events = {"InsertLeave", "TextChanged", "CursorMoved", "BufWinLeave", "CursorMovedI"},
         conditions = {
             exists = true,
             filename_is_not = {},
@@ -621,11 +621,11 @@ map <leader>. <leader>c<leader><Esc>
 " wsl 与 win 剪贴板
 map <leader>y :!clip.exe < %<CR>
 " 查看详细
-map <C-insert> gd
-map <C-delete> :bd<CR>
+map <C-insert> gdzz
+map <C-delete> :bd<CR>zz
 " 切换buffer
-map <a-h> :bp<CR>
-map <a-l> :bn<CR>
+map <a-h> :bp<CR>zz
+map <a-l> :bn<CR>zz
 " 取消搜索
 map <Esc> :nohl<CR>
 " 行头 行尾
@@ -716,7 +716,7 @@ require('pretty-fold').setup{
 require('pretty-fold.preview').setup_keybinding()
 EOF
 " 保存folds
-set viewoptions=folds,slash,unix
+set viewoptions=folds,unix
 
 "vim-man
 "<leader>b新建水平窗口打开man
