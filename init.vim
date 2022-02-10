@@ -56,10 +56,10 @@ Plug 'thinca/vim-quickrun'
 Plug 'junegunn/vim-easy-align'
 
 " easymotion
-Plug 'easymotion/vim-easymotion'
+"Plug 'easymotion/vim-easymotion'
 
 " hop
-"Plug 'phaazon/hop.nvim'
+Plug 'phaazon/hop.nvim'
 
 " auto pairs
 Plug 'jiangmiao/auto-pairs' 
@@ -582,14 +582,13 @@ nnoremap <A-r> :RustRun<CR>
 " 使用 `:verbose nmap <M-t>` 检测 Alt-t是否被占用
 " 使用 `:verbose nmap` 则显示所有快捷键绑定信息
 nnoremap <A-t> :RustTest<CR>
-
 lua << EOF
 local autosave = require("autosave")
 autosave.setup(
     {
         enabled = true,
         execution_message = "🌿( ﾟ∀。)" .. vim.fn.strftime("%H:%M:%S"),
-        events = {"InsertLeave", "TextChanged", "CursorMoved", "BufWinLeave", "CursorMovedI"},
+        events = {"InsertLeave", "TextChanged", "CursorMoved"},
         conditions = {
             exists = true,
             filename_is_not = {},
@@ -599,7 +598,7 @@ autosave.setup(
         write_all_buffers = false,
         on_off_commands = true,
         clean_command_line_interval = 0,
-        debounce_delay = 20
+        debounce_delay = 120
     }
 )
 EOF
@@ -662,41 +661,6 @@ func! SetTitle()
     normal Go 
 endfunc
 
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
-" Jump to anywhere you want with minimal keystrokes, with just one key binding.
-" `s{char}{label}`
-nmap s <Plug>(easymotion-overwin-f)
-" or
-" `s{char}{char}{label}`
-" Need one more keystroke, but on average, it may be more comfortable.
-nmap ss <Plug>(easymotion-overwin-f2)
-
-" Turn on case-insensitive feature
-let g:EasyMotion_smartcase = 1
-
-" Gif config
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
-
-let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
-
-let g:easymotion#is_active = 0
-
-function! EasyMotionCoc() abort
-  if EasyMotion#is_active()
-    let g:easymotion#is_active = 1
-    CocDisable
-  else
-    if g:easymotion#is_active == 1
-      let g:easymotion#is_active = 0
-      CocEnable
-    endif
-  endif
-endfunction
-autocmd TextChanged,CursorMoved * call EasyMotionCoc()
 
 
 nmap <tab> za
@@ -717,6 +681,17 @@ require('pretty-fold.preview').setup_keybinding()
 EOF
 " 保存folds
 set viewoptions=folds,unix
+
+lua<<EOF
+require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+EOF
+map <leader>h :HopWordCurrentLineBC<CR>
+map <leader>l :HopWordCurrentLineAC<CR>
+map <leader>j :HopLineAC<CR>
+map <leader>k :HopLineBC<CR>
+map <leader>/ :HopPattern<CR>
+map s :HopChar1<CR>
+map st :HopChar2<CR>
 
 "vim-man
 "<leader>b新建水平窗口打开man
