@@ -1,3 +1,4 @@
 {
-    "rust-analyzer.updates.checkOnStartup": false
+    "rust-analyzer.updates.checkOnStartup": false,
+    "diagnostic.warningSign": "!!"
 }

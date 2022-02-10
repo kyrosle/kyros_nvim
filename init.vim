@@ -5,6 +5,8 @@ let g:indentLine_fileTypeExclude = ['dashboard']
 let g:coc_disable_startup_warning = 1
 
 let mapleader=" "
+" coc插件
+" coc-clangd coc-cmake coc-emmet coc-git coc-highlight coc-jdei coc-json coc-pairs coc-rust-analyzer coc-sh coc-snippets coc-syntax coc-vimlsp coc-yaml
 
 call plug#begin('~/.config/nvim/.vim/plugged')
 " 个人文档
